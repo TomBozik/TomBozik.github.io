@@ -25,14 +25,12 @@ main {
   max-height: 100vh;
   justify-content: center;
   color: var(--text-primary);
-  overflow: hidden;
 
   .content {
     padding: 20px;
     max-width: 1100px;
     width: 100%;
-    overflow-y: auto;
-  }  
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -2,7 +2,7 @@
   <div>
     <Nav />
     <transition name="fade" appear>
-    <slot />
+      <slot />
     </transition>
   </div>
 </template>
@@ -25,20 +25,21 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
 }
 :root {
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  --bg-primary: #050504; 
+  font-family: 'Poppins', sans-serif;
+  --bg-primary: #050504;
   --bg-secondary: #5e5e5e;
-  --bg-tertiary: #9a9a9b;  
-  --text-primary: #d6d6d8; 
+  --bg-tertiary: #9a9a9b;
+  --text-primary: #d6d6d8;
   --text-secondary: #f4ea03;
-  --text-tertiary: #aea305; 
+  --text-tertiary: #aea305;
+  --heading-primary: #d6d6d8;
 }
 body {
   background-color: #000000;
@@ -46,12 +47,10 @@ body {
   padding: 0;
 }
 
-
 .fade-enter-active {
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 .fade-enter {
   opacity: 0;
 }
-
 </style>

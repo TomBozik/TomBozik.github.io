@@ -2,7 +2,7 @@
   <nav>
     <div class="nav-links">
       <div class="menu-item"><g-link to="/">Domov</g-link></div>
-      <div class="menu-item"><g-link to="/projects">Projekty</g-link></div>
+      <div class="menu-item"><g-link to="/project">Projekty</g-link></div>
       <div class="menu-item"><g-link to="/about">O mne</g-link></div>
     </div>
   </nav>
@@ -14,9 +14,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
 @media only screen and (min-width: 600px) {
-  nav {
+   nav {
     padding-left: 3vh;
     position: fixed;
     display: flex;
@@ -25,17 +26,17 @@ export default {
     justify-content: center;
 
     .nav-links {
-      display:flex;
+      display: flex;
       writing-mode: vertical-rl;
-      transform:rotate(180deg);
-      
+      transform: rotate(180deg);
+
       .menu-item {
         margin-top: 20px;
         .active--exact {
-          color: var(--text-secondary);;
+          color: var(--text-secondary);
         }
 
-        a{
+        a {
           color: var(--text-primary);
           text-decoration: none;
           font-size: 16px;
@@ -51,40 +52,42 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-	nav {
+  nav {
     position: fixed;
     bottom: 0;
     height: 6vh;
-		width: 100vw;
+    width: 100vw;
+    background: black;
+    z-index: 10;
 
     .nav-links {
       display: flex;
       height: 100%;
       justify-content: space-between;
       align-items: center;
-      
+
       .menu-item {
         width: 100%;
         text-align: center;
         .active--exact {
-          color: var(--text-secondary);;
+          color: var(--text-secondary);
         }
-          a{
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
+        a {
+          color: var(--text-primary);
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 600;
 
-            &:hover {
-              color: var(--text-secondary);
-            }
+          &:hover {
+            color: var(--text-secondary);
+          }
         }
       }
     }
-	}
+  }
 }
 
 a.active--exact.active {
-    color: blue;
+  color: blue;
 }
 </style>

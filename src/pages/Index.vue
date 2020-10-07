@@ -1,15 +1,16 @@
 <template>
   <Layout>
-    <main>
-      <div class="content">
+    <div class="content">
+      <div class="txt-container">
         <div class="txt">
-          Na stránke sa pracuje
-          <span style="--i:1;">.</span>
-          <span style="--i:2;">.</span>
-          <span style="--i:3;">.</span>
+          <div class="heading">Tomáš Božik</div>
+          <div class="sub-heading">web developer</div>
         </div>
       </div>
-    </main>
+      <div class="img-container">
+        <g-image src="~/assets/me2.png" class="img"/>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -22,55 +23,72 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-  margin: auto;
-  padding-left: 5vh;
+
+.content{
   display: flex;
-  min-height: 100vh;
-  max-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+  min-height: 94vh;
+  align-items: center;
   justify-content: center;
   color: var(--text-primary);
-  overflow: hidden;
-
-  .content {
-    padding: 20px;
-    width: 100%;
-    overflow-y: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    font-size: 25px;
-    font-weight: 700;
-  }  
 }
 
-@media only screen and (max-width: 600px) {
-  main {
-    padding-left: 0;
-    min-height: 94vh;
-    max-height: 94vh;
+.txt-container {
+  text-align: center;
+  width: 100%;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.sub-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.img-container {
+  display: flex;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .content{
+    flex-direction: row;
+    max-width: 1100px;
+    min-height: 100vh;
+    margin: auto;
+  }
+  .txt-container {
+    position: relative;
+    text-align: center;
+    width: 50%;
+  }
+  .img-container {
+    width: 50%;
+  }
+  .img {
+    width: 100%;
+  }
+  .txt {
+    position: absolute;
+    right: -100px;
+  }
+  .heading {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+  }
+  .sub-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: start;
+    padding-left: 10px;
   }
 }
 
-
-.txt span {
-    display: inline-block;
-    animation: animate 1.5s ease-in-out infinite;
-    animation-delay: calc(0.1s * var(--i));
-    padding-left: 2px;
-}
-@keyframes animate {
-    0% {
-        transform: translateY(0px);
-    }
-    20% {
-        transform: translateY(-20px);
-    }
-    40%{
-        transform: translateY(0px);
-    }
-}
 </style>
