@@ -491,7 +491,13 @@
         <div class="gallery">
           <g-image class="preview-img" v-for="(image, i) in $page.project.images" :src="image.preview.src" :key="i" @click="index = i" />
         </div>
-        <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+        <client-only>
+          <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+        </client-only>
+
+        <div class="back-link">
+          <g-link to="/project">Späť na projekty</g-link>
+        </div>
 
       </div>
     </main>
@@ -618,6 +624,10 @@ li {
   }
 }
 
+.back-link{
+    display: none;
+}
+
 @media only screen and (min-width: 700px) {
   .content{
     display: flex;
@@ -632,6 +642,17 @@ li {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+  }
+  .back-link{
+    padding-top: 20px;
+    display: inline;
+    a {
+      color: var(--text-secondary);
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   }
 }
 </style>
