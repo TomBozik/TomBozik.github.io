@@ -13,6 +13,12 @@ module.exports = {
         typeName: 'Project',
         path: './content/project/**/*.md',
       }
+    },
+    {
+    use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-180173624-1'
+      }
     }
   ],
   transformers: {
