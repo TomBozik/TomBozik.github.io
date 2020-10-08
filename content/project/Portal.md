@@ -4,6 +4,8 @@ stack_description: ['Laravel', 'Tailwind']
 stack: ['Laravel', 'Tailwindcss', 'Laravel Forge']
 functions: ['Facebook prihlasovanie', 'Galéria', 'Hodnotenie', 'Mapy', 'Filtrovanie', 'Responzívne' ]
 cover: ./images/portal-0.png
+git: https://portal.tmbo.sk/
+demo: https://portal.tmbo.sk/
 images:
 - image: ./images/portal-0.png
 - image: ./images/portal-1.png

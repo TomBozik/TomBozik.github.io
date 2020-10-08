@@ -4,6 +4,8 @@ stack_description: ['Laravel', 'Tailwind']
 stack: ['Laravel', 'Vue Components', 'Tailwindcss', 'Laravel Forge']
 functions: ['Vytváranie eventov', 'Prihlasovanie', 'Prieniky dátumov', 'Responzívne' ]
 cover: ./images/events-0.png
+git: https://github.com/TomBozik/Events
+demo: https://events.tmbo.sk/
 images:
 - image: ./images/events-0.png
 - image: ./images/events-2.png
