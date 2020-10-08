@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="img-container">
-        <g-image src="~/assets/me2.png" class="img"/>
+        <g-image src="~/assets/me2.png" class="img" />
       </div>
     </div>
   </Layout>
@@ -55,7 +55,7 @@ export default {
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .content{
     flex-direction: row;
     max-width: 1100px;
@@ -72,6 +72,7 @@ export default {
   }
   .img {
     width: 100%;
+    height: 50%;  // safari hack ... 
   }
   .txt {
     position: absolute;
