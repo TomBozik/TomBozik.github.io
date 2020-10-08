@@ -489,7 +489,7 @@
         </div>
 
         <div class="gallery">
-          <g-image class="preview-img" v-for="(image, i) in $page.project.images" :src="image.preview.src" :key="i" @click="index = i" />
+          <g-image class="preview-img" v-for="(image, i) in $page.project.images" :src="image.preview.src" :key="i" @click="index = i" :alt="image.alt" />
         </div>
         <client-only>
           <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
@@ -517,6 +517,7 @@
       images {
         preview: image (width: 608, height: 430, fit: cover)
         image
+        alt
       }
     }
   }

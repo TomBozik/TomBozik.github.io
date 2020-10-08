@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="img-container">
-        <g-image src="~/assets/me2.png" class="img" />
+        <g-image src="~/assets/me2.png" class="img" alt="author" />
       </div>
     </div>
   </Layout>

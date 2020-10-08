@@ -479,7 +479,7 @@
                   </div>
                 </div>
               </div>
-              <g-image :src="project.node.cover.src" class="preview-img" />
+              <g-image :src="project.node.cover.src" class="preview-img" :alt="project.node.title" />
             </a>
 
           </div>

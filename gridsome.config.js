@@ -5,7 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'tomáš_božik',
+  siteName: 'Tomáš Božik',
+  siteDescription: "portfolio",
+  siteUrl: 'https://bozik.dev',
   plugins: [
     {
       use: '@gridsome/source-filesystem',

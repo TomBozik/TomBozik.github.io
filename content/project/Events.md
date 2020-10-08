@@ -8,8 +8,11 @@ git: https://github.com/TomBozik/Events
 demo: https://events.tmbo.sk/
 images:
 - image: ./images/events-0.png
+  alt: main page
 - image: ./images/events-2.png
+  alt: event create
 - image: ./images/events-3.png
+  alt: after event create
 ---
 
 Webová aplikácia na vytváranie a plánovanie eventov. Nie je potrebný žiadny email. Ľudia sa môžu do eventu prihlásiť pomocou linku a následne vybrať dátumy, v ktorých sa môžu eventu zúčastniť. Po prihlásení do eventu dostane každý jedinečný kód, pomocou ktorého sa v budúcnosti môže do eventu prhlásiť. Aplikácia zobrazuje časové úseky v ktorých sa môže eventu zúčastniť každý jeden účastník.

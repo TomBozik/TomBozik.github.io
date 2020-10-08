@@ -8,7 +8,10 @@ git: https://github.com/TomBozik/Links_FE
 demo: https://links.tmbo.sk/
 images:
 - image: ./images/links-0.png
+  alt: main page
 - image: ./images/links-1.png
+  alt: filter
 - image: ./images/links-2.png
+  alt: create link
 ---
 Webová aplikácia na ukladanie url stránok, ktoré sa triedia do kategórií a prideľujú sa im tagy na základe ktorých sa dajú filtrovať. Uložené url sa dajú vyexportovať do CSV, prípadne importovať nové.
