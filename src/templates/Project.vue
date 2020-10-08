@@ -489,12 +489,9 @@
         </div>
 
         <div class="gallery">
-          <div v-for="image in $page.project.images" :key="image.id">
-            <a :href="image.image.src" target="_blank"
-              ><g-image :src="image.preview.src" class="preview-img"/>
-            </a>
-          </div>
+          <g-image class="preview-img" v-for="(image, i) in $page.project.images" :src="image.preview.src" :key="i" @click="index = i" />
         </div>
+        <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
 
       </div>
     </main>
@@ -520,6 +517,7 @@
 </page-query>
 
 <script>
+import VueGallerySlideshow from 'vue-gallery-slideshow';
 export default {
   name: "ProjectTemplate",
   metaInfo() {
@@ -527,6 +525,20 @@ export default {
       title: this.$page.project.title,
     };
   },
+    components: {
+    VueGallerySlideshow
+  },
+  data: function (){
+    return {
+      images: null,
+      index: null
+    }
+  },
+  created() {
+      if (this.$page) {
+        this.images = this.$page.project.images.map(i => i.image.src);
+      }
+    }
 };
 </script>
 
@@ -620,6 +632,18 @@ li {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+  }
+}
+</style>
+
+
+<style>
+@media only screen and (min-width: 700px) {
+  .vgs__container { 
+    height: 65vh !important; 
+  }
+  .vgs {
+    height: 90vh !important;
   }
 }
 </style>
